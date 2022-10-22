@@ -3,9 +3,9 @@ import Row from './Row';
 class Table extends Component {
   render() {
     return (
-      <div className="row mt-5 mb-5">
-        <div className="custom-card ">
-          <table className="table ">
+      <div className='row mt-5 mb-5'>
+        <div className='custom-card '>
+          <table className='table '>
             <thead>
               <tr>
                 <th> Title</th>
@@ -16,9 +16,10 @@ class Table extends Component {
               </tr>
             </thead>
             <tbody>
-              <tr id="addRow"></tr> 
-           {this.props.EmptyRow.map((element)=>( <Row key={element.id} ShowData={element} onDeletedRow={this.props.onDeleted} />))}
-             
+              <tr id='addRow'></tr>
+              {this.props.EmptyRow.map((element) => (
+                <Row key={element.id} ShowData={element} onDeletedRow={this.props.onDeleted} />
+              ))}
             </tbody>
           </table>
         </div>
